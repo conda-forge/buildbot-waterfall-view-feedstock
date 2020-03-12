@@ -1,18 +1,18 @@
 {% set name = "buildbot-waterfall-view" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: eb793942c3539ff1880de1f8b3b25a2387f5e3b1c4b456bf991e9939ef466291
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a8584a711310ffc0f6555e50446da0cc42f6b5fa00e4f114462d6e5af198f267
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv "
+  script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   host:
@@ -29,12 +29,12 @@ test:
     - buildbot_waterfall_view
 
 about:
-  home: "https://buildbot.net/"
-  license: "GNU General Public (GPL)"
-  license_family: "LGPL"
-  license_file: "LICENSE"
-  summary: "Buildbot Waterfall View plugin"
-  doc_url: "https://docs.buildbot.net"
+  home: https://buildbot.net/
+  license: GNU General Public (GPL)
+  license_family: LGPL
+  license_file: LICENSE
+  summary: Buildbot Waterfall View plugin
+  doc_url: https://docs.buildbot.net
 
 extra:
   recipe-maintainers:
