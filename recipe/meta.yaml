@@ -10,9 +10,9 @@ source:
   sha256: 8553a3d7251e9d6e07ff42f3f99266d06a7733e9e8a1d383b7c0028a7655c0be
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: '{{ PYTHON }} -m pip install . -vv '
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -27,11 +27,15 @@ requirements:
 test:
   imports:
     - buildbot_waterfall_view
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://buildbot.net/
-  license: GNU General Public (GPL)
-  license_family: LGPL
+  license: GPL-2.0-or-later
+  license_family: GPL
   license_file: LICENSE
   summary: Buildbot Waterfall View plugin
   doc_url: https://docs.buildbot.net
