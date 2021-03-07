@@ -1,5 +1,5 @@
 {% set name = "buildbot-waterfall-view" %}
-{% set version = "2.10.1" %}
+{% set version = "2.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 78e50c710845edf17830758e6ffc628b329526d9bd0e4b6f582bc40ad118312b
+  sha256: 8d360031bcefa444d7a1c09dc75e45d1b2b95529b4841beedcaf0f9a250df61d
 
 build:
   number: 0
